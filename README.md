@@ -1,5 +1,6 @@
 # pathfinding-robots
 
+[![GitPack](https://img.shields.io/badge/-GitPack-571997)](https://github.com/dominiksalvet/gitpack)
 [![standard-readme compliant](https://img.shields.io/badge/readme_style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 
 > Simple terminal game with pathfinding.
@@ -32,4 +33,4 @@ Do you want to contribute? Do you have any questions? Then the [*CONTRIBUTING.md
 
 ## License
 
-The template project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
