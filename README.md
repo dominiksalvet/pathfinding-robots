@@ -12,6 +12,7 @@ First, it generates a two dimensional world of free fields and barriers. Free fi
 ## Table of Contents
 
 * [Install](#install)
+  * [Dependencies](#dependencies)
 * [Usage](#usage)
   * [Example](#example)
 * [Contributing](#contributing)
@@ -19,7 +20,15 @@ First, it generates a two dimensional world of free fields and barriers. Free fi
 
 ## Install
 
-Install content.
+This project supports [GitPack](https://github.com/dominiksalvet/gitpack). Local installation/update:
+
+```sh
+gitpack install github.com/dominiksalvet/pathfinding-robots
+```
+
+### Dependencies
+
+* **Python 3**
 
 ## Usage
 
