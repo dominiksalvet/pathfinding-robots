@@ -28,7 +28,7 @@ gitpack install github.com/dominiksalvet/pathfinding-robots
 
 ### Dependencies
 
-* **Python 3**
+* Python 3
 
 ## Usage
 
