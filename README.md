@@ -7,7 +7,7 @@
 
 This project was created during the first semester of my bachelor's studies within a programming course. It uses a very simple pathfinding implementation and demonstrates it on a robot-chasing game with intuitive terminal controls. It is provided in its original form with some small modifications.
 
-First, it generates a two dimensional world of free fields and barriers. Free fields always create a connected graph so that robots can move anywhere. When the world is generated, you can take a look at it. After, you can start the world simulation and robots will start to move. When the simulation ends, you can browse historical path of each robot.
+First, it generates a two dimensional world of free fields and barriers. Free fields always create a connected graph so that robots can move to any free field. When the world is generated, you can take a look at it. After, you can start the world simulation and robots will start to move. When the simulation ends, you can browse historical path of each robot.
 
 ## Table of Contents
 
