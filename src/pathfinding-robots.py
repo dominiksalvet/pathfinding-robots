@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+#-------------------------------------------------------------------------------
+# Copyright 2016-2019 Dominik Salvet
+# github.com/dominiksalvet/pathfinding-robots
+#-------------------------------------------------------------------------------
+
 from enum import Enum
 from time import sleep
 from random import randint
