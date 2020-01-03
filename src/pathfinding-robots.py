@@ -13,10 +13,7 @@ import time
 
 # comments are only in necessary sections, sorry for my English
 
-
-
 class Rotation(Enum):
-
     up = '^'
     right = '>'
     down = 'v'
@@ -34,9 +31,7 @@ class Rotation(Enum):
             rot = Rotation.down if left == True else Rotation.up
         return rot
 
-
 class Vector2(object):
-
     @staticmethod
     def toRot(vector2):
         if (vector2.x == 0):
@@ -69,8 +64,6 @@ class Vector2(object):
 
     def __str__(this):
         return ("(" + str(this.x) + ", " + str(this.y) + ")")
-
-
 
 class World(object):
     groundPattern = '.'
@@ -253,10 +246,8 @@ class World(object):
         
     def freeUpPosition(this, pos):
         this.capturePosition(pos, World.groundPattern)
-        
 
 class Robot(object):
-
     def __init__(this, world, pos, rot):
         this.world = world
         this.pos = pos
@@ -332,10 +323,7 @@ class Robot(object):
         else:
             this.turnRight()
 
-            
-
 class Game(object):
-
     # method for correct reading numbers from user 
     @staticmethod
     def readNumber(message, minValue, maxValue):
@@ -535,8 +523,6 @@ class Game(object):
                 
                 world.showRobotTrack(robot)
         print()
-
-
 
 game = Game()
 game.start()
