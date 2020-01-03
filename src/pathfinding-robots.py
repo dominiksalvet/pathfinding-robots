@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #-------------------------------------------------------------------------------
-# Copyright 2016-2019 Dominik Salvet
+# Copyright 2016-2020 Dominik Salvet
 # github.com/dominiksalvet/pathfinding-robots
 #-------------------------------------------------------------------------------
 
