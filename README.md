@@ -32,7 +32,7 @@ gitpack install github.com/dominiksalvet/pathfinding-robots
 
 ## Usage
 
-Usage content.
+To run the game, execute `pathfinding-robots.py` command. Then type a number based on the current options and press the enter key. Feel free to take a look below and get inspired.
 
 ### Example
 
