@@ -11,3 +11,4 @@ The changes not yet present in any release are listed in this section.
 ### Added
 
 * Support for [GitPack](https://github.com/dominiksalvet/gitpack).
+* The shebang has been added to make running the program easier.
