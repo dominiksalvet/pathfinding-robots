@@ -485,7 +485,8 @@ class Game(object):
 
     def worldMenu(this, world):
         while (True):
-            print("    Menu for '" + world.name + "' world:\n    [1] Show this world\n    [2] Start this world\n    [3] Robot path viewer\n    [0] Cancel")
+            print("    Menu for '" + world.name + "' world:\n    [1] Show this world")
+            print("    [2] Start this world\n    [3] Robot path viewer\n    [0] Cancel")
             choice = Game.readNumber("    > ", 0, 3)
             if (choice == 1):
                 world.show("", True)
