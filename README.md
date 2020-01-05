@@ -36,7 +36,9 @@ To run the game, execute the `pathfinding-robots.py` command. Then type a number
 
 ### Example
 
-Example content.
+<p align="center">
+    <img src="img/example.gif" alt="pathfinding-robots example">
+</p>
 
 ## Contributing
 
