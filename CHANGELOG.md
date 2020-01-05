@@ -8,6 +8,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 The changes not yet present in any release are listed in this section.
 
+## 1.0.0 (2020-01-05)
+
 ### Added
 
 * Support for [GitPack](https://github.com/dominiksalvet/gitpack).
