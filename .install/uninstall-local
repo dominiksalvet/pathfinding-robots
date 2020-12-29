@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#-------------------------------------------------------------------------------
+# Copyright 2020 Dominik Salvet
+# https://github.com/dominiksalvet/pathfinding-robots
+#-------------------------------------------------------------------------------
+
+echo 'removing files'
+rm -f "$HOME/.local/bin/pathfinding-robots.py"

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#-------------------------------------------------------------------------------
+# Copyright 2020 Dominik Salvet
+# https://github.com/dominiksalvet/pathfinding-robots
+#-------------------------------------------------------------------------------
+
+echo 'copying files'
+mkdir -p /usr/local/bin/ &&
+cp src/pathfinding-robots.py /usr/local/bin/

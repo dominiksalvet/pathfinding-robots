@@ -2,7 +2,7 @@
 
 #-------------------------------------------------------------------------------
 # Copyright 2016-2020 Dominik Salvet
-# github.com/dominiksalvet/pathfinding-robots
+# https://github.com/dominiksalvet/pathfinding-robots
 #-------------------------------------------------------------------------------
 
 from enum import Enum
@@ -68,7 +68,7 @@ class Vector2(object):
 class World(object):
     groundPattern = '.'
     barrierPattern = '#'
-    
+
     def __init__(this, size, name):
         this.size = size
         this.name = name
@@ -81,7 +81,7 @@ class World(object):
     def start(this, maxRound):
 
         this.maxRound = this.actualRound + maxRound
-        
+
         this.show("Initial state of this game", False)
         sleep(1 / this.UPS)
         this.running = True
@@ -113,7 +113,7 @@ class World(object):
 
         if (highlightHuntedRobot == True):
             string = "'x' is hunted robot. His pattern is: '" + this.huntedRobot.rot.value + "'\n"
-        
+
         for y in range(this.size.y):
             for x in range(this.size.x):
                 if (highlightHuntedRobot == True and this.huntedRobot.pos == Vector2(x, y)):
@@ -148,7 +148,7 @@ class World(object):
             return True
         else:
             return False
-            
+
     def createBarrier(this, pos):
         if (this.isFreePosition(pos)):
             this.capturePosition(pos, World.barrierPattern)
@@ -166,20 +166,20 @@ class World(object):
         shortestFound = False
         nextStepVectors = []
         discovered = []
-        
+
         while (possToProcess and shortestFound == False):
-            
+
             points = deque(possToProcess)
             possToProcess.clear()
-            
+
             while (points):
-                
+
                 pointToProcess = points.popleft()
                 if (ignoreRobots == True):
                     nearestFreePositions = this.nearestMovablePositions(pointToProcess)
                 else:
                     nearestFreePositions = this.nearestFreePositions(pointToProcess)
-                    
+
                 if (pointToProcess in this.nearestMovablePositions(posA)):
                     shortestFound = True
                     nextStepVectors.append(Vector2(pointToProcess.x - posA.x, pointToProcess.y - posA.y))
@@ -243,7 +243,7 @@ class World(object):
 
     def capturePosition(this, pos, pattern):
         this.playground[pos.y][pos.x] = pattern
-        
+
     def freeUpPosition(this, pos):
         this.capturePosition(pos, World.groundPattern)
 
@@ -300,13 +300,13 @@ class Robot(object):
             this.turnLeft()
         elif (randNum == 0):
             this.turnRight()
-            
+
     def targetMove(this, pos):
         vectorsToMove = this.world.stepVectorsFromAToB(this.pos, pos, False)
 
         if (not vectorsToMove):
             vectorsToMove = this.world.stepVectorsFromAToB(this.pos, pos, True)
-            
+
         rotsToMove = []
         for vector2 in vectorsToMove:
             rotsToMove.append(Vector2.toRot(vector2))
@@ -324,12 +324,12 @@ class Robot(object):
             this.turnRight()
 
 class Game(object):
-    # method for correct reading numbers from user 
+    # method for correct reading numbers from user
     @staticmethod
     def readNumber(message, minValue, maxValue):
         isNumber = False
         number = 0
-        
+
         while (isNumber == False or number > maxValue or number < minValue):
             print(message, end = "")
             try:
@@ -337,7 +337,7 @@ class Game(object):
             except ValueError:
                 continue
             isNumber = True
-            
+
         return number
 
     def __init__(this):
@@ -363,7 +363,7 @@ class Game(object):
 
     def createWorldMenu(this):
         print("  Create world:")
-        
+
         name = ""
         nameReserved = True
         while (name == "" or nameReserved == True):
@@ -374,13 +374,13 @@ class Game(object):
                 if (name == world.name):
                     nameReserved = True
                     print("This world name is reserved.")
-                    
+
         width = Game.readNumber("  World width (15) = ", 5, 32)
         height = Game.readNumber("  World height (15) = ", 5, 32)
         robotNum = Game.readNumber("  Number of robots (4) = ", 2, (width * height) // (width + height))
         barrierRatio = Game.readNumber("  Barrier percentage ratio (30) = ", 5, 50)
         barrierNum = int((width * height) * (barrierRatio / 100))
-        
+
         world = World(Vector2(width, height), name)
         this.worlds.append(world)
 
@@ -392,10 +392,10 @@ class Game(object):
 
     # generating random world as connected graph, probably exists much faster algorithm
     def generateWorld(this, world, barrierNum, robotNum):
-        
+
         displayedProgress = 0
         remainingPoss = []
-        
+
         for i in range(barrierNum):
             connectedGraph = False
             while (connectedGraph == False):
@@ -443,16 +443,16 @@ class Game(object):
             actualProgress = 0
             while (int((i / barrierNum) * 100) > actualProgress + 10):
                 actualProgress += 10
-                
+
             if (displayedProgress != actualProgress):
                 print(str(actualProgress) + "%")
             displayedProgress = actualProgress
-                    
+
         for _ in range(robotNum):
             success = False
             while (success == False):
                 randPos = Vector2(randint(0, world.size.x - 1), randint(0, world.size.y - 1))
-                
+
                 randRot = randint(0, 3)
                 if (randRot == 0):
                     randRot = Rotation.up
@@ -462,7 +462,7 @@ class Game(object):
                     randRot = Rotation.down
                 else:
                     randRot = Rotation.left
-                    
+
                 success = world.createRobot(randPos, randRot)
 
     def selectWorldMenu(this):
@@ -501,7 +501,7 @@ class Game(object):
     def startWorldMenu(this, world):
         if (world.huntedRobot.caught == False):
             print("      Start this game with:")
-            
+
             world.UPS = Game.readNumber("      Updates per second (1) = ", 1, 65535)
             maxRound = Game.readNumber("      Maximal round number (30) = ", 5, 65535)
 
@@ -521,7 +521,7 @@ class Game(object):
 
                 if (robot == world.huntedRobot):
                     print("This is hunted robot.")
-                
+
                 world.showRobotTrack(robot)
         print()
 
