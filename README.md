@@ -1,3 +1,7 @@
+**If you have GitPack 0.7.0 and lower, please visit [this discussion](https://github.com/dominiksalvet/gitpack/discussions/10).**
+
+---
+
 # pathfinding-robots
 
 [![GitPack](https://img.shields.io/badge/-GitPack-571997)](https://github.com/topics/gitpack)
