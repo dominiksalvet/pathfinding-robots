@@ -4,7 +4,7 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme_style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fdominiksalvet%2Fpathfinding-robots&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
-> Simple terminal game with pathfinding.
+> Simple terminal game with pathfinding
 
 This project was created during the first semester of my bachelor's studies within a programming course. It uses a very simple pathfinding implementation and demonstrates it on a robot-chasing game with intuitive terminal controls. It is provided in its original form with some small modifications.
 
